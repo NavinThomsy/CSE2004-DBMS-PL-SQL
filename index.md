@@ -212,6 +212,8 @@ OUPUT: > Welcome Navin
  |- RETURN will simply exit the control from subprogram. |- RETURN will exit the control from subprogram and also returns the value |
  |- Return datatype will not be specified at the time of creation |- Return datatype is mandatory at the time of creation|
  
+ 
+ 
  # _**Built-in Functions in PL/SQL**_
  PL/SQL contains various built-in functions to work with strings and date datatype. Here we are going to see the commonly used functions  and their usage.
  
@@ -224,6 +226,8 @@ OUPUT: > Welcome Navin
  | TO_CHAR | Converts the other datatype to character datatype |
  | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. |
  | TO_NUMBER (text, format) | Converts the text to number type of the given format. Informat '9' denotes the number of digits |
+ 
+ 
  
  ## **String Functions**
  
@@ -243,6 +247,8 @@ OUPUT: > Welcome Navin
  | LTRIM ( text ) | Trims the leading white space from the text |
  | RTRIM ( text ) | Trims the trailing white space from the text |
  
+ 
+ 
  ## **Date Functions**
  
  These are functions that are used for manipulating with dates.
@@ -254,6 +260,7 @@ OUPUT: > Welcome Navin
 | TRUNC | Round of the date variable to the lower possible value |
 | ROUND | Rounds the date to the nearest limit either higher or lower |
 | MONTHS_BETWEEN | Returns the number of months between two dates |
+
 
 
 # _**MADE BY**_
