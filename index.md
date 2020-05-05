@@ -212,3 +212,15 @@ OUPUT: > Welcome Navin
  |- RETURN will simply exit the control from subprogram. |- RETURN will exit the control from subprogram and also returns the value |
  |- Return datatype will not be specified at the time of creation |- Return datatype is mandatory at the time of creation|
  
+ ##_**`Built-in Functions in PL/SQL`**_
+ PL/SQL contains various built-in functions to work with strings and date datatype. Here we are going to see the commonly used functions  and their usage.
+ 
+ ### **Conversion Functions**
+ 
+ These built-in functions are used to convert one datatype to another datatype.
+ 
+ | Function Name | Usage | Example |
+ |:---|:---|:---|
+ | TO_CHAR | Converts the other datatype to character datatype | TO_CHAR(123); |
+ | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. | TO_DATE('2015-JAN-15', 'YYYY-MON-DD');
+Output: 1/15/2015 |
