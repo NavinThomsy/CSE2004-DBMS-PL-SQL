@@ -63,7 +63,7 @@ RETURN is the keyword that instructs the compiler to switch the control from the
 
 Normally, parent or main block will call the subprograms, and then the control will shift from those parent block to the called subprograms. RETURN in the subprogram will return the control back to their parent block. In the case of functions RETURN statement also returns the value. The datatype of this value is always mentioned at the time of function declaration. The datatype can be of any valid PL/SQL data type.
 
-## **What is Stored Procedure in PL/SQL ?**
+# **What is Stored Procedure in PL/SQL ?**
 
 A Procedure is a subprogram unit that consists of a group of PL/SQL statements. Each procedure in Oracle has its own unique name by which it can be referred. This subprogram unit is stored as a database object. Below are the characteristics of this subprogram unit.
 
@@ -97,4 +97,60 @@ EXCEPTION
 	<exception handling part>
 END;
 
+```
+- **CREATE PROCEDURE** instructs the compiler to create new procedure. Keyword '**OR REPLACE**' instructs the compile to replace the       existing procedure (if any) with the current one.
+- Procedure name should be unique.
+- Keyword '**IS**' will be used, when the procedure is nested into some other blocks. If the procedure is standalone then '**AS**' will   be used. Other than this coding standard, both have the same meaning.
+ 
+## **Example 1: Creating Procedure and calling it using EXEC**
+
+In this example, we are going to create a procedure that takes the name as input and prints the welcome message as output. We are going to use EXEC command to call procedure.
+
+```
+CREATE OR REPLACE PROCEDURE welcome_msg (p_name IN VARCHAR2) 
+IS
+BEGIN
+dbms_output.put_line (‘Welcome '|| p_name);
+END;
+/
+EXEC welcome_msg (‘Navin’);
+```
+## **Code Explanation** 
+
+- **Code line 1**: Creating the procedure with name 'welcome_msg' and with one parameter 'p_name' of 'IN' type.
+- **Code line 4**: Printing the welcome message by concatenating the input name.
+                 Procedure is compiled successfully.
+- **Code line 7**: Calling the procedure using EXEC command with the parameter 'Navin'. Procedure is executed, and the message is                          printed out as "Welcome Navin".
+
+# **What is Stored Function in PL/SQL?**
+
+Functions is a standalone PL/SQL subprogram. Like PL/SQL procedure, functions have a unique name by which it can be referred. These are stored as PL/SQL database objects. Below are some of the characteristics of functions.
+
+- Functions are a standalone block that is mainly used for calculation purpose.
+- Function use RETURN keyword to return the value, and the datatype of this is defined at the time of creation.
+- A Function should either return a value or raise the exception, i.e. return is mandatory in functions.
+- Function with no DML statements can be directly called in SELECT query whereas the function with DML operation can only be called from   other PL/SQL blocks.
+- It can have nested blocks, or it can be defined and nested inside the other blocks or packages.
+- It contains declaration part (optional), execution part, exception handling part (optional).
+- The values can be passed into the function or fetched from the procedure through the parameters.
+- These parameters should be included in the calling statement.
+- Function can also return the value through OUT parameters other than using RETURN.
+- Since it will always return the value, in calling statement it always accompanies with assignment operator to populate the variables.
+
+```
+CREATE OR REPLACE FUNCTION
+<procedure_name>
+  (
+  <parameter1 IN/OUT <datatype>
+  ..
+  .
+  )
+  RETURN <datatype>
+[IS|AS]
+  <declaration_part>
+BEGIN
+  <execution part>
+EXCEPTION
+   <exception handling part>
+END;
 ```
