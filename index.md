@@ -11,9 +11,9 @@ Apart from this, we will cover the major differences between these two subprogra
 
 Here you will learn the following:
 
--Terminologies in PL/SQL Subprograms
--What is Procedure in PL/SQL?
--What is Function?
--Similarities between Procedure and Function
--Procedure Vs. Function: Key Differences
--Built-in Functions in PL/SQL
+- Terminologies in PL/SQL Subprograms
+- What is Procedure in PL/SQL?
+- What is Function?
+- Similarities between Procedure and Function
+- Procedure Vs. Function: Key Differences
+- Built-in Functions in PL/SQL
