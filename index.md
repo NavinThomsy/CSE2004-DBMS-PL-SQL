@@ -219,8 +219,44 @@ OUPUT: > Welcome Navin
  
  These built-in functions are used to convert one datatype to another datatype.
  
- | Function Name | Usage | Example |
- |:---|:---|:---|
- | TO_CHAR | Converts the other datatype to character datatype | TO_CHAR(123); |
- | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. | TO_DATE('2015-JAN-15',    'YYYY-MON-DD');
- Output: 1/15/2015 |
+ | Function Name | Usage | 
+ |:---|:---|
+ | TO_CHAR | Converts the other datatype to character datatype |
+ | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. |
+ | TO_NUMBER (text, format) | Converts the text to number type of the given format. Informat '9' denotes the number of digits |
+ 
+ ### **String Functions**
+ 
+ These are the functions that are used on the character datatype.
+ 
+ 
+ | Function Name | Usage |
+ |:---|:---|
+ | INSTR(text, string, start, occurance) | Gives the position of particular text in the given string. |
+ | SUBSTR ( text, start, length) | Gives the substring value of the main string. |
+ | UPPER ( text ) | Returns the uppercase of the provided text |
+ | LOWER ( text ) | Returns the lowercase of the provided text |
+ | INITCAP ( text) | Returns the given text with the starting letter in upper case. |
+ | LENGTH ( text ) | Returns the length of the given string |
+ | LPAD ( text, length, pad_char) | Pads the string in the left side for the given length (total string) with the given character |
+ | RPAD (text, length, pad_char) | Pads the string in the right side for the given length (total string) with the given character |
+ | LTRIM ( text ) | Trims the leading white space from the text |
+ | RTRIM ( text ) | Trims the trailing white space from the text |
+ 
+ ### **Date Functions**
+ 
+ These are functions that are used for manipulating with dates.
+ 
+| Function Name | Usage |
+|:---|:---|
+| ADD_MONTHS (date, no.of months) | Adds the given months to the date |
+| SYSDATE | Returns the current date and time of the server |
+| TRUNC | Round of the date variable to the lower possible value |
+| ROUND | Rounds the date to the nearest limit either higher or lower |
+| MONTHS_BETWEEN | Returns the number of months between two dates |
+
+
+# _**MADE BY**_
+  _Navin Thomsy_
+  _19BCE1695_
+  
