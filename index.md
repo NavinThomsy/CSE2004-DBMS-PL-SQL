@@ -1,6 +1,6 @@
 # **PL/SQL**
 
-## _**Stored Procedures and Functions**_
+## _**`Stored Procedures and Functions`**_
 
 
 Here you are going to see the detailed description on how to create and execute the named blocks (procedures and functions).
@@ -22,7 +22,7 @@ Here you will learn the following:
 
 Before we learn about PL/SQL subprograms, we will discuss the various terminologies that are the part of these subprograms. Below are the terminologies that we are going to discuss.
 
-## **Parameter:**
+## **`Parameter:`**
 
 The parameter is variable or placeholder of any valid PL/SQL datatype through which the PL/SQL subprogram exchange the values with the main code. This parameter allows to give input to the subprograms and to extract from these subprograms.
 
@@ -37,20 +37,20 @@ Based on their purpose parameters are classified as:
 - OUT Parameter
 - IN OUT Parameter
 
-## **IN Parameter**
+## **`IN Parameter`**
 
 - This parameter is used for giving input to the subprograms.
 - It is a read-only variable inside the subprograms. Their values cannot be changed inside the subprogram.
 - In the calling statement, these parameters can be a variable or a literal value or an expression, for example, it could be the           arithmetic expression like '5*8' or 'a/b' where 'a' and 'b' are variables.
 - By default, the parameters are of IN type.
 
-## **OUT Parameter**
+## **`OUT Parameter`**
 
 - This parameter is used for getting output from the subprograms.
 - It is a read-write variable inside the subprograms. Their values can be changed inside the subprograms.
 - In the calling statement, these parameters should always be a variable to hold the value from the current subprograms.
 
-## **IN OUT Parameter**
+## **`IN OUT Parameter`**
 
 - This parameter is used for both giving input and for getting output from the subprograms.
 - It is a read-write variable inside the subprograms. Their values can be changed inside the subprograms.
@@ -58,12 +58,12 @@ Based on their purpose parameters are classified as:
 
 These parameter type should be mentioned at the time of creating the subprograms.
 
-## **RETURN**
+## **`RETURN`**
 RETURN is the keyword that instructs the compiler to switch the control from the subprogram to the calling statement. In subprogram RETURN simply means that the control needs to exit from the subprogram. Once the controller finds RETURN keyword in the subprogram, the code after this will be skipped.
 
 Normally, parent or main block will call the subprograms, and then the control will shift from those parent block to the called subprograms. RETURN in the subprogram will return the control back to their parent block. In the case of functions RETURN statement also returns the value. The datatype of this value is always mentioned at the time of function declaration. The datatype can be of any valid PL/SQL data type.
 
-# **What is Stored Procedure in PL/SQL ?**
+# **`What is Stored Procedure in PL/SQL ?`**
 
 A Procedure is a subprogram unit that consists of a group of PL/SQL statements. Each procedure in Oracle has its own unique name by which it can be referred. This subprogram unit is stored as a database object. Below are the characteristics of this subprogram unit.
 
@@ -79,7 +79,7 @@ A Procedure is a subprogram unit that consists of a group of PL/SQL statements. 
 - Procedure can have a RETURN statement to return the control to the calling block, but it cannot return any values through the RETURN -   statement.
 - Procedures cannot be called directly from SELECT statements. They can be called from another block or through EXEC keyword.
 
-## **Syntax**
+## **`Syntax`**
 
 ```
 CREATE OR REPLACE PROCEDURE 
@@ -102,7 +102,7 @@ END;
 - Procedure name should be unique.
 - Keyword '**IS**' will be used, when the procedure is nested into some other blocks. If the procedure is standalone then '**AS**' will   be used. Other than this coding standard, both have the same meaning.
  
-## **Example 1: Creating Procedure and calling it using EXEC**
+## **`Example 1: Creating Procedure and calling it using EXEC`**
 
 In this example, we are going to create a procedure that takes the name as input and prints the welcome message as output. We are going to use EXEC command to call procedure.
 
@@ -115,14 +115,14 @@ END;
 /
 EXEC welcome_msg (‘Navin’);
 ```
-## **Code Explanation** 
+## **`Code Explanation`** 
 
 - **Code line 1**: Creating the procedure with name 'welcome_msg' and with one parameter 'p_name' of 'IN' type.
 - **Code line 4**: Printing the welcome message by concatenating the input name.
                  Procedure is compiled successfully.
 - **Code line 7**: Calling the procedure using EXEC command with the parameter 'Navin'. Procedure is executed, and the message is                          printed out as "Welcome Navin".
 
-# **What is Stored Function in PL/SQL?**
+# **`What is Stored Function in PL/SQL?`**
 
 Functions is a standalone PL/SQL subprogram. Like PL/SQL procedure, functions have a unique name by which it can be referred. These are stored as PL/SQL database objects. Below are some of the characteristics of functions.
 
@@ -159,7 +159,7 @@ END;
 - **RETURN** datatype should be mentioned.
 - Keyword '**IS**' will be used, when the procedure is nested into some other blocks. If the procedure is standalone then '**AS**' will   be used. Other than this coding standard, both have the same meaning.
 
-## **Example 1: Creating Function and calling it using Anonymous Block**
+## **`Example 1: Creating Function and calling it using Anonymous Block`**
 
 ```
 CREATE OR REPLACE FUNCTION welcome_msgJune ( p_name IN VARCHAR2) RETURN VAR.CHAR2
@@ -184,7 +184,7 @@ SELECT welcome_msg_func(‘Navin') FROM DUAL;
 ```
 OUPUT: > Welcome Navin
 
-## **Code Explanation**
+## **`Code Explanation`**
 - **Code line 1**: Creating the function with name 'welcome_msg_func' and with one parameter 'p_name' of 'IN' type.
 - **Code line 2**: declaring the return type as VARCHAR2
 - **Code line 5**: Returning the concatenated value 'Welcome' and the parameter value.
@@ -194,12 +194,12 @@ OUPUT: > Welcome Navin
 - **Code line 12**: Printing the variable value. The output you will get here is "Welcome Guru99"
 - **Code line 14**: Calling the same function through SELECT statement. The return value is directed to the standard output directly.
 
-## **Similarities between Procedure and Function**
+## **`Similarities between Procedure and Function`**
 
 - Both can be called from other PL/SQL blocks.
 - If the exception raised in the subprogram is not handled in the subprogram exception handling section, then it will propagate to the -   calling block.
 - Both can have as many parameters as required.
 - Both are treated as database objects in PL/SQL.
 
-## **Procedure Vs. Function: Key Differences**
+## **`Procedure Vs. Function: Key Differences`**
 
