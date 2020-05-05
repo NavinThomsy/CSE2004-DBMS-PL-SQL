@@ -212,7 +212,7 @@ OUPUT: > Welcome Navin
  |- RETURN will simply exit the control from subprogram. |- RETURN will exit the control from subprogram and also returns the value |
  |- Return datatype will not be specified at the time of creation |- Return datatype is mandatory at the time of creation|
  
- #_**Built-in Functions in PL/SQL**_
+ # _**Built-in Functions in PL/SQL**_
  PL/SQL contains various built-in functions to work with strings and date datatype. Here we are going to see the commonly used functions  and their usage.
  
  ### **Conversion Functions**
