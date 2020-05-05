@@ -222,5 +222,4 @@ OUPUT: > Welcome Navin
  | Function Name | Usage | Example |
  |:---|:---|:---|
  | TO_CHAR | Converts the other datatype to character datatype | TO_CHAR(123); |
- | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. | TO_DATE('2015-JAN-15',                                                                                                                   'YYYY-MON-DD'); 
-                                                                                                               Output: 1/15/2015 |
+ | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. | TO_DATE('2015-JAN-15',    'YYYY-MON-DD');Output: 1/15/2015 |
