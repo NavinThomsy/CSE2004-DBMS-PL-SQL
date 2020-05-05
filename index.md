@@ -18,7 +18,7 @@ Here you will learn the following:
 - Procedure Vs. Function: Key Differences
 - Built-in Functions in PL/SQL
 
-## _**Terminologies in PL/SQL Subprograms**_
+## `_**Terminologies in PL/SQL Subprograms**_`
 
 Before we learn about PL/SQL subprograms, we will discuss the various terminologies that are the part of these subprograms. Below are the terminologies that we are going to discuss.
 
@@ -154,3 +154,52 @@ EXCEPTION
    <exception handling part>
 END;
 ```
+- **CREATE FUNCTION** instructs the compiler to create a new function. Keyword '**OR REPLACE**' instructs the compiler to replace the       existing function (if any) with the current one.
+- The Function name should be unique.
+- **RETURN** datatype should be mentioned.
+- Keyword '**IS**' will be used, when the procedure is nested into some other blocks. If the procedure is standalone then '**AS**' will   be used. Other than this coding standard, both have the same meaning.
+
+## **Example 1: Creating Function and calling it using Anonymous Block**
+
+```
+CREATE OR REPLACE FUNCTION welcome_msgJune ( p_name IN VARCHAR2) RETURN VAR.CHAR2
+IS
+BEGIN
+RETURN (‘Welcome ‘|| p_name);
+END;
+/
+```
+OUTPUT: > _Function created_
+```
+DECLARE
+lv_msg VARCHAR2(250);
+BEGIN
+lv_msg := welcome_msg_func (‘Navin’);
+dbms_output.put_line(lv_msg);
+END;
+```
+OUTPUT: >Welcome Navin
+```
+SELECT welcome_msg_func(‘Navin') FROM DUAL;
+```
+OUPUT: > Welcome Navin
+
+## **Code Explanation**
+- **Code line 1**: Creating the function with name 'welcome_msg_func' and with one parameter 'p_name' of 'IN' type.
+- **Code line 2**: declaring the return type as VARCHAR2
+- **Code line 5**: Returning the concatenated value 'Welcome' and the parameter value.
+- **Code line 8**: Anonymous block to call the above function.
+- **Code line 9**: Declaring the variable with datatype same as the return datatype of the function.
+- **Code line 11**: Calling the function and populating the return value to the variable 'lv_msg'.
+- **Code line 12**: Printing the variable value. The output you will get here is "Welcome Guru99"
+- **Code line 14**: Calling the same function through SELECT statement. The return value is directed to the standard output directly.
+
+## **Similarities between Procedure and Function**
+
+- Both can be called from other PL/SQL blocks.
+- If the exception raised in the subprogram is not handled in the subprogram exception handling section, then it will propagate to the -   calling block.
+- Both can have as many parameters as required.
+- Both are treated as database objects in PL/SQL.
+
+## **Procedure Vs. Function: Key Differences**
+
