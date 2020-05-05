@@ -18,7 +18,7 @@ Here you will learn the following:
 - Procedure Vs. Function: Key Differences
 - Built-in Functions in PL/SQL
 
-## `_**Terminologies in PL/SQL Subprograms**_`
+## _**`Terminologies in PL/SQL Subprograms`**_
 
 Before we learn about PL/SQL subprograms, we will discuss the various terminologies that are the part of these subprograms. Below are the terminologies that we are going to discuss.
 
