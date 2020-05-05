@@ -214,7 +214,7 @@ OUPUT: > Welcome Navin
  
  
  
-# _**Built-in Functions in PL/SQL**_
+# **Built-in Functions in PL/SQL**
 PL/SQL contains various built-in functions to work with strings and date datatype. Here we are going to see the commonly used functions and their usage.
  
 ## **Conversion Functions**
@@ -225,7 +225,7 @@ These built-in functions are used to convert one datatype to another datatype.
  |:---|:---|
  | TO_CHAR | Converts the other datatype to character datatype |
  | TO_DATE ( string, format ) | Converts the given string to date. The string should match with the format. |
- | TO_NUMBER (text, format) | Converts the text to number type of the given format. Informat '9' denotes the number of digits |
+ | TO_NUMBER (text, format) | Converts the text to number type of the given format. In format '9' denotes the number of digits |
  
  
  
