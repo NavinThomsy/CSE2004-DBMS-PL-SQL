@@ -63,7 +63,7 @@ RETURN is the keyword that instructs the compiler to switch the control from the
 
 Normally, parent or main block will call the subprograms, and then the control will shift from those parent block to the called subprograms. RETURN in the subprogram will return the control back to their parent block. In the case of functions RETURN statement also returns the value. The datatype of this value is always mentioned at the time of function declaration. The datatype can be of any valid PL/SQL data type.
 
-# **`What is Stored Procedure in PL/SQL ?`**
+# _**`What is Stored Procedure in PL/SQL ?`**_
 
 A Procedure is a subprogram unit that consists of a group of PL/SQL statements. Each procedure in Oracle has its own unique name by which it can be referred. This subprogram unit is stored as a database object. Below are the characteristics of this subprogram unit.
 
@@ -122,7 +122,7 @@ EXEC welcome_msg (‘Navin’);
                  Procedure is compiled successfully.
 - **Code line 7**: Calling the procedure using EXEC command with the parameter 'Navin'. Procedure is executed, and the message is                          printed out as "Welcome Navin".
 
-# **`What is Stored Function in PL/SQL?`**
+# _**`What is Stored Function in PL/SQL?`**_
 
 Functions is a standalone PL/SQL subprogram. Like PL/SQL procedure, functions have a unique name by which it can be referred. These are stored as PL/SQL database objects. Below are some of the characteristics of functions.
 
@@ -194,12 +194,21 @@ OUPUT: > Welcome Navin
 - **Code line 12**: Printing the variable value. The output you will get here is "Welcome Guru99"
 - **Code line 14**: Calling the same function through SELECT statement. The return value is directed to the standard output directly.
 
-## **`Similarities between Procedure and Function`**
+## _**`Similarities between Procedure and Function`**_
 
 - Both can be called from other PL/SQL blocks.
 - If the exception raised in the subprogram is not handled in the subprogram exception handling section, then it will propagate to the -   calling block.
 - Both can have as many parameters as required.
 - Both are treated as database objects in PL/SQL.
 
-## **`Procedure Vs. Function: Key Differences`**
+## _**`Procedure Vs. Function: Key Differences`**_
 
+ | Procedure | Function |
+ |:---|:---|
+ |- Used mainly to a execute certain process   |- Used mainly to perform some calculation   |
+ |- Cannot call in SELECT statement |- A Function that contains no DML statements can be called in SELECT statement |
+ |- Use OUT parameter to return the value |- Use RETURN to return the value |
+ |- It is not mandatory to return the value |- It is mandatory to return the value |
+ |- RETURN will simply exit the control from subprogram. |- RETURN will exit the control from subprogram and also returns the value |
+ |- Return datatype will not be specified at the time of creation |- Return datatype is mandatory at the time of creation|
+ 
