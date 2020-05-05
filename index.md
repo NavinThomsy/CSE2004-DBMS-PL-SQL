@@ -214,12 +214,12 @@ OUPUT: > Welcome Navin
  
  
  
- # _**Built-in Functions in PL/SQL**_
- PL/SQL contains various built-in functions to work with strings and date datatype. Here we are going to see the commonly used functions  and their usage.
+# _**Built-in Functions in PL/SQL**_
+PL/SQL contains various built-in functions to work with strings and date datatype. Here we are going to see the commonly used functions and their usage.
  
- ## **Conversion Functions**
- 
- These built-in functions are used to convert one datatype to another datatype.
+## **Conversion Functions**
+
+These built-in functions are used to convert one datatype to another datatype.
  
  | Function Name | Usage | 
  |:---|:---|
@@ -229,9 +229,9 @@ OUPUT: > Welcome Navin
  
  
  
- ## **String Functions**
+## **String Functions**
  
- These are the functions that are used on the character datatype.
+These are the functions that are used on the character datatype.
  
  
  | Function Name | Usage |
@@ -248,10 +248,9 @@ OUPUT: > Welcome Navin
  | RTRIM ( text ) | Trims the trailing white space from the text |
  
  
+## **Date Functions**
  
- ## **Date Functions**
- 
- These are functions that are used for manipulating with dates.
+These are functions that are used for manipulating with dates.
  
 | Function Name | Usage |
 |:---|:---|
