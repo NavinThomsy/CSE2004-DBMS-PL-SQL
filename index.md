@@ -205,12 +205,12 @@ OUPUT: > Welcome Navin
 
  | Procedure | Function |
  |:---|:---|
- |- Used mainly to a execute certain process   |- Used mainly to perform some calculation   |
- |- Cannot call in SELECT statement |- A Function that contains no DML statements can be called in SELECT statement |
- |- Use OUT parameter to return the value |- Use RETURN to return the value |
- |- It is not mandatory to return the value |- It is mandatory to return the value |
- |- RETURN will simply exit the control from subprogram. |- RETURN will exit the control from subprogram and also returns the value |
- |- Return datatype will not be specified at the time of creation |- Return datatype is mandatory at the time of creation|
+ | Used mainly to a execute certain process   | Used mainly to perform some calculation   |
+ | Cannot call in SELECT statement | A Function that contains no DML statements can be called in SELECT statement |
+ | Use OUT parameter to return the value | Use RETURN to return the value |
+ | It is not mandatory to return the value | It is mandatory to return the value |
+ | RETURN will simply exit the control from subprogram. | RETURN will exit the control from subprogram and also returns the value |
+ | Return datatype will not be specified at the time of creation | Return datatype is mandatory at the time of creation |
  
  
  
